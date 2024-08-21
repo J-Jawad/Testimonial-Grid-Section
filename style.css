@@ -164,7 +164,7 @@ h2 {
   gap: 0.5rem;
 }
 
-@media (min-width: 1328px) {
+@media (min-width: 1023px) {
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -112,6 +112,7 @@ h2 {
   background-color: bisque;
   padding: 2rem;
   border-radius: 0.5rem;
+  box-shadow: 0px 2px 20px gray;
 }
 
 .user-info img {

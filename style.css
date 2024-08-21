@@ -1,0 +1,200 @@
+/* css reset by josh comeau */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+g,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  /* colors */
+
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+
+  /*fonts */
+
+  --fs-p: 0.8125rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Verydarkgrayishblue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--Lightgrayishblue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--White);
+  padding: 5rem 1.5rem;
+}
+
+p {
+  font-size: var(--fs-p);
+}
+
+.card p {
+  opacity: 60%;
+  padding-right: 0.5rem;
+}
+
+h1 {
+  font-size: var(--fs-p);
+  font-weight: 400;
+}
+.verified {
+  font-size: 0.7rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, minmax(fit-content, 1fr));
+  gap: 30px 23px;
+}
+
+.card {
+  background-color: bisque;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.user-info img {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+
+.card-1 {
+  background-color: var(--Moderateviolet);
+  z-index: -2;
+  position: relative;
+}
+
+.card-2 {
+  background-color: var(--Verydarkgrayishblue);
+}
+
+.card-3 {
+  background-color: var(--White);
+  color: var(--Verydarkblackishblue);
+}
+.card-4 {
+  background-color: var(--Verydarkblackishblue);
+}
+.card-5 {
+  background-color: var(--White);
+  color: var(--Verydarkblackishblue);
+}
+
+.card-4 img {
+  border: 3px solid var(--Moderateviolet);
+}
+.card-1 .user-info img {
+  border: 3px solid hsl(263, 55%, 60%);
+}
+
+.quotation {
+  position: absolute;
+  z-index: -1;
+  right: 5%;
+  top: 0;
+}
+
+.user-info {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1328px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 8rem;
+    gap: 30px 23px;
+    max-height: 570px;
+    max-width: 1112px;
+  }
+  .card-1 {
+    grid-area: 1/1/2/3;
+    background-color: var(--Moderateviolet);
+  }
+
+  .card-2 {
+    grid-area: 1/3/2/4;
+    background-color: var(--Verydarkgrayishblue);
+  }
+
+  .card-3 {
+    grid-area: 2/1/3/2;
+    background-color: var(--White);
+    color: var(--Verydarkblackishblue);
+  }
+  .card-4 {
+    grid-area: 2/2/3/4;
+    background-color: var(--Verydarkblackishblue);
+  }
+  .card-5 {
+    grid-area: 1/4/3/5;
+    background-color: var(--White);
+    color: var(--Verydarkblackishblue);
+  }
+}
